@@ -1,4 +1,163 @@
 @import 'base';
+
 .polaroid {
-  font-family: Garamond;
+  font-family: Helvetica, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 600px;
+  height: 800px;
+
+  &-top {
+    width: 100%;
+    height: 175px;
+    background-color: $gray-1;
+  }
+
+  &-hinge {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    &-left {
+      position: relative;
+      background-color: $black;
+      border-bottom: 60px solid $white;
+      border-left: 15px solid $white;
+      border-right: 15px solid $black;
+      border-top: 60px solid $black;
+      width: 0px;
+      height: 0px;
+
+      &::before{
+        position: absolute;
+        top: -60px;
+        right: -25px;
+        content: "";
+        width: 10px;
+        height: 120px;
+        background-color: $black;
+      }
+    }
+
+    &-center {
+      width: 120px;
+      height: 120px;
+      background-color: $black;
+    }
+
+    &-right {
+      position: relative;
+      background-color: $black;
+      border-bottom: 60px solid $white;
+      border-right: 15px solid $white;
+      border-left: 15px solid $black;
+      border-top: 60px solid $black;
+      width: 0px;
+      height: 0px;
+
+      &::before{
+        position: absolute;
+        top: -60px;
+        left: -25px;
+        content: "";
+        width: 10px;
+        height: 120px;
+        background-color: $black;
+      }
+    }
+  }
+
+  &-body {
+
+    &-main {
+      width: 480px;
+      margin: -30px auto 0px auto;
+      padding: 30px 20px;
+      height: 210px;
+      background-color:$gray-1;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      &-lens {
+        width: 315px;  
+        height: 150px;
+        border: 3px solid $black;
+        border-radius: 7.5px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+
+        &-glass {
+          border: 3px solid $white;
+          width: 145px;
+          height: 145px;
+          background-color: $black;
+          border-radius: 7.5px;
+
+          &-aperture {
+            width: 115px;
+            height: 115px;
+            margin: 15px;
+            background-color: $gray-2;
+            border-radius: 15px;
+
+            &-reflection {
+              width: 100px;
+              height: 100px;
+              border-top-left-radius: 15px;
+              border-bottom-right-radius: 200px;
+              background-color: $gray-3;
+            }
+          }
+        }
+      }
+
+      &-viewfinder {
+        width: 120px;
+        height: 195px;
+        border: 3px solid $black;
+        border-radius: 7.5px;
+      }
+    }
+
+    &-printer {
+
+      &-top {
+        position: relative;
+        width: 560px;
+        height: 40px;
+        background-color: $gray-2;
+
+        &::before {
+          position: absolute;
+          top: 0px;
+          content: "";
+          border-left: 40px solid $white;
+          border-bottom: 40px solid $gray-2;
+          border-right: 0px solid $white;
+        }
+
+        &::after {
+          position: absolute;
+          top: 0px;
+          right:-40px;
+          content: "";
+          border-right: 40px solid $white;
+          border-bottom: 40px solid $gray-2;
+          border-left: 0px solid $white;
+        }
+      }
+
+      &-bottom {
+        width: 100%;
+        height: 210px;
+        background-color: $gray-1;
+      }
+    }
+  }
 }
