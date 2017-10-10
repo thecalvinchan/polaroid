@@ -1,39 +1,53 @@
 import audioSample from '../assets/polaroid_600.mp3';
 
+const STATE_LOADING = 'loading';
+const STATE_READY = 'ready';
+
+const POLAROID_SIZE = 430;
+
 class Printer {
   constructor(camera, stream, canvas, pictureClassName = 'polaroid-picture') {
+    this.state = STATE_LOADING;
     this.video = document.createElement('video');
     this.audio = new Audio(audioSample);
 
     this.video.srcObject = stream;
     this.video.play();
-    // TODO: add event listener to when video starts playing
+    this.video.addEventListener('canplay', () => {
+      this.loadDimensions();
+      this.state = STATE_READY;
+    });
 
     this.canvas = canvas;
     [this.$polaroid] = document.getElementsByClassName(pictureClassName);
   }
 
-  printPolaroid() {
+  loadDimensions() {
     const srcWidth = this.video.videoWidth;
     const srcHeight = this.video.videoHeight;
-    let [sX, sY, sWidth, sHeight] = [0, 0, 430, 430];
+    [this.sX, this.sY, this.sWidth, this.sHeight] = [0, 0, POLAROID_SIZE, POLAROID_SIZE];
 
     // determines bounds for rendering video stream onto canvas
     // we want to render the absolute center of the user media stream
     if (srcWidth > srcHeight) {
-      sX = srcWidth / 2 - srcHeight / 2;
-      sY = 0;
-      sWidth = srcHeight;
-      sHeight = srcHeight;
+      // camera captures media in landscape aspect ratio 
+      this.sX = srcWidth / 2 - srcHeight / 2;
+      this.sY = 0;
+      this.sWidth = srcHeight;
+      this.sHeight = srcHeight;
     } else {
-      sX = 0;
-      sY = srcHeight / 2 - srcWidth / 2;
-      sWidth = srcWidth;
-      sHeight = srcWidth;
+      // camera captures media in portrait aspect ratio 
+      this.sX = 0;
+      this.sY = srcHeight / 2 - srcWidth / 2;
+      this.sWidth = srcWidth;
+      this.sHeight = srcWidth;
     }
+  }
 
-    this.canvas.getContext('2d').drawImage(this.video, sX, sY, sWidth, sHeight, 0, 0, 430, 430);
+  printPolaroid() {
+    this.canvas.getContext('2d').drawImage(this.video, this.sX, this.sY, this.sWidth, this.sHeight, 0, 0, POLAROID_SIZE, POLAROID_SIZE);
     this.audio.play();
+    this.state = STATE_LOADING;
 
     this.printing(() => {
       window.setTimeout(() => {
@@ -53,10 +67,16 @@ class Printer {
   reset(cb) {
     this.$polaroid.classList.add('reset');
     this.$polaroid.classList.add('closed');
+    this.state = STATE_READY;
     if (cb) {
       cb();
     }
   }
+
+  getState() {
+    return this.state;
+  }
 }
 
 export default Printer;
+export { STATE_LOADING, STATE_READY }
