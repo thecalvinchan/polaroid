@@ -4,8 +4,16 @@ An HTML/CSS/JS recreation of a classic polaroid 600 camera
 
 ## Instructions
 
-`yarn build`
+### Demo
 
+[Demo](https://thecalvinchan.github.io/polaroid/)
+
+- Grant the web app permissions to access the video camera
+- Click on the red shutter button to take a digital polaroid! (irony intended)
+
+### Build Instructions 
+
+`yarn build`
 Open `index.html` in a modern web browser of choice
 
 ## Background
@@ -19,9 +27,13 @@ Polaroid](http://camera.ediot.com/wp-content/uploads/2010/11/Legoland-Polaroid-6
 I dug up an old one that's been collecting dust in my closet and decided an
 interactive web version of it.
 
+![Polaroid 600](/design_assets/polaroid_600.jpg)
+
 I took some time in the beginning to draw up a quick mock in Illustrator, but
 also took some liberties during the implementation phase to change some things
 up.
+
+![Polaroid Design](/design_assets/polaroid_design.jpg)
 
 On the technical side, `getUserMedia` is used to request access to the user's
 webcam. This is what creates the video stream that eventually renders a picture
