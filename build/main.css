@@ -1,0 +1,486 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.flash {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  z-index: 5;
+  visibility: hidden; }
+  .flash.reset {
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 1.5s linear; }
+  .flash.trigger {
+    visibility: visible; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.polaroid-top {
+  width: 600px;
+  height: 175px;
+  background-color: #1A1A1A;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  flex-flow: row nowrap; }
+  .polaroid-top-logo {
+    flex-grow: 2;
+    height: 125px;
+    background-color: #4D4D4D;
+    margin: 20px 10px 20px 20px;
+    border-radius: 15px;
+    border: 5px solid #000000; }
+  .polaroid-top-flash {
+    flex-grow: 1;
+    height: 135px;
+    background-color: #E6E6E6;
+    background: repeating-linear-gradient(to bottom, #E6E6E6, #E6E6E6 15px, #FFFFFF 15px, #FFFFFF 30px);
+    margin: 20px 20px 20px 10px;
+    border-radius: 15px; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.polaroid-hinge {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; }
+  .polaroid-hinge-left {
+    position: relative;
+    background-color: #000000;
+    border-bottom: 60px solid #29ABE2;
+    border-left: 15px solid #29ABE2;
+    border-right: 15px solid #000000;
+    border-top: 60px solid #000000;
+    width: 0px;
+    height: 0px; }
+    .polaroid-hinge-left::before {
+      position: absolute;
+      top: -60px;
+      right: -25px;
+      content: "";
+      width: 10px;
+      height: 120px;
+      background-color: #000000; }
+  .polaroid-hinge-center {
+    width: 120px;
+    height: 120px;
+    background-color: #000000; }
+  .polaroid-hinge-right {
+    position: relative;
+    background-color: #000000;
+    border-bottom: 60px solid #29ABE2;
+    border-right: 15px solid #29ABE2;
+    border-left: 15px solid #000000;
+    border-top: 60px solid #000000;
+    width: 0px;
+    height: 0px; }
+    .polaroid-hinge-right::before {
+      position: absolute;
+      top: -60px;
+      left: -25px;
+      content: "";
+      width: 10px;
+      height: 120px;
+      background-color: #000000; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.polaroid-body {
+  position: relative;
+  z-index: 1; }
+  .polaroid-body-main {
+    width: 480px;
+    margin: -30px auto 0px auto;
+    padding: 30px 20px;
+    height: 210px;
+    background-color: #998675;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; }
+    .polaroid-body-main-shutter {
+      position: absolute;
+      top: 210px;
+      left: -40px;
+      width: 20px;
+      height: 40px;
+      border: 10px solid #1A1A1A;
+      background-color: #FF383F;
+      border-bottom-left-radius: 15px; }
+      .polaroid-body-main-shutter:hover {
+        cursor: pointer; }
+      .polaroid-body-main-shutter::before {
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        content: "";
+        border-top: 10px solid #29ABE2;
+        border-left: 20px solid #29ABE2;
+        border-bottom: 10px solid #4D4D4D;
+        border-right: 20px solid #4D4D4D; }
+    .polaroid-body-main-lens {
+      width: 310px;
+      height: 150px;
+      background-color: #1A1A1A;
+      border: 5px solid #000000;
+      border-radius: 7.5px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end; }
+      .polaroid-body-main-lens-pattern {
+        margin: 10px;
+        width: 140px;
+        height: 130px;
+        background: repeating-linear-gradient(to right, #000000, #000000 5px, transparent 5px, transparent 7px); }
+      .polaroid-body-main-lens-glass {
+        border: 5px solid #FFFFFF;
+        width: 140px;
+        height: 140px;
+        background-color: #000000;
+        border-radius: 7.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .polaroid-body-main-lens-glass-aperture {
+          width: 115px;
+          height: 115px;
+          background-color: #E6E6E6;
+          border-radius: 60px;
+          overflow: hidden; }
+          .polaroid-body-main-lens-glass-aperture-reflection {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            border-top-left-radius: 150px;
+            transform: translateX(10px) translateY(10px);
+            background-color: #4D4D4D; }
+    .polaroid-body-main-viewfinder {
+      width: 80px;
+      height: 155px;
+      background-color: #1A1A1A;
+      border: 5px solid #000000;
+      border-radius: 7.5px;
+      padding: 20px; }
+      .polaroid-body-main-viewfinder-glass {
+        border: 5px solid #000000;
+        width: 70px;
+        height: 70px;
+        background-color: #4D4D4D;
+        border-radius: 7.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .polaroid-body-main-viewfinder-glass-aperture {
+          width: 80%;
+          height: 80%;
+          background-color: #E6E6E6;
+          border-radius: 60px;
+          overflow: hidden; }
+          .polaroid-body-main-viewfinder-glass-aperture-reflection {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            border-top-left-radius: 60px;
+            transform: translateX(5px) translateY(5px);
+            background-color: #000000; }
+  .polaroid-body-printer-top {
+    position: relative;
+    width: 560px;
+    height: 40px;
+    background-color: #4D4D4D; }
+    .polaroid-body-printer-top::before {
+      position: absolute;
+      top: 0px;
+      content: "";
+      border-left: 40px solid #29ABE2;
+      border-bottom: 40px solid #4D4D4D;
+      border-right: 0px solid #29ABE2; }
+    .polaroid-body-printer-top::after {
+      position: absolute;
+      top: 0px;
+      right: -40px;
+      content: "";
+      border-right: 40px solid #29ABE2;
+      border-bottom: 40px solid #4D4D4D;
+      border-left: 0px solid #29ABE2; }
+  .polaroid-body-printer-bottom {
+    width: 100%;
+    height: 210px;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; }
+    .polaroid-body-printer-bottom-slot {
+      width: 80%;
+      height: 5px;
+      background-color: #000000;
+      border: 20px solid #4D4D4D;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit; }
+
+body {
+  background-color: #29ABE2; }
+
+.polaroid {
+  font-family: Helvetica, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 600px;
+  height: 800px; }
+  .polaroid-picture {
+    position: relative;
+    top: -100px;
+    text-align: center;
+    z-index: 2;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 580px; }
+    .polaroid-picture:not(.reset) {
+      transition: height 2.25s linear; }
+    .polaroid-picture.closed {
+      height: 0px; }
+    .polaroid-picture-canvas {
+      background-color: #1A1A1A;
+      width: 440px;
+      height: 440px;
+      border: 20px solid #FFFFFF;
+      border-bottom: 120px solid #FFFFFF; }
