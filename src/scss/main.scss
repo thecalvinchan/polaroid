@@ -1,4 +1,7 @@
 @import 'base';
+body {
+  background-color: $blue;
+}
 
 .polaroid {
   font-family: Helvetica, sans-serif;
@@ -53,8 +56,8 @@
     &-left {
       position: relative;
       background-color: $black;
-      border-bottom: 60px solid $white;
-      border-left: 15px solid $white;
+      border-bottom: 60px solid $blue;
+      border-left: 15px solid $blue;
       border-right: 15px solid $black;
       border-top: 60px solid $black;
       width: 0px;
@@ -80,8 +83,8 @@
     &-right {
       position: relative;
       background-color: $black;
-      border-bottom: 60px solid $white;
-      border-right: 15px solid $white;
+      border-bottom: 60px solid $blue;
+      border-right: 15px solid $blue;
       border-left: 15px solid $black;
       border-top: 60px solid $black;
       width: 0px;
@@ -129,8 +132,8 @@
 					top: -30px;
 					left: -10px;
 					content: "";
-					border-top: 10px solid $white;
-					border-left: 20px solid $white;
+					border-top: 10px solid $blue;
+					border-left: 20px solid $blue;
 					border-bottom: 10px solid $gray-2;
 					border-right: 20px solid $gray-2;
 				}
@@ -238,9 +241,9 @@
           position: absolute;
           top: 0px;
           content: "";
-          border-left: 40px solid $white;
+          border-left: 40px solid $blue;
           border-bottom: 40px solid $gray-2;
-          border-right: 0px solid $white;
+          border-right: 0px solid $blue;
         }
 
         &::after {
@@ -248,9 +251,9 @@
           top: 0px;
           right:-40px;
           content: "";
-          border-right: 40px solid $white;
+          border-right: 40px solid $blue;
           border-bottom: 40px solid $gray-2;
-          border-left: 0px solid $white;
+          border-left: 0px solid $blue;
         }
       }
 
@@ -276,4 +279,32 @@
       }
     }
   }
+
+  &-picture {
+    position: relative;
+    top: -100px;
+    text-align: center;
+    z-index: 2;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 580px;
+    transition: height 3s linear;
+
+    &.closed {
+      height: 0px;
+    }
+
+    &-canvas {
+      background-color: $gray-1;
+      width: 440px;
+      height: 440px;
+      border: 20px solid $white;
+      border-bottom: 120px solid $white;
+    }
+  }
 }
+
