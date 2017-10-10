@@ -13,8 +13,8 @@ An HTML/CSS/JS recreation of a classic polaroid 600 camera
 
 ### Build Instructions 
 
-`yarn build`
-Open `index.html` in a modern web browser of choice
+- `yarn build`
+- Open `index.html` in a modern web browser of choice
 
 ## Background
 
@@ -51,6 +51,7 @@ A lot of the code is documented with comments and todos. Furthermore:
 - Implement a way for users to save and share their photos
 - Add instructions on how to use the app. Polish the page to be more
   user-friendly
+- The entire app was created as framework agnostic as possible
 
 ## Credits
 
