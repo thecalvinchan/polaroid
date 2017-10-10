@@ -10,6 +10,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
+    publicPath: 'build/',
     filename: '[name].js'
   },
   resolve: {
@@ -27,6 +28,14 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ])
+      },
+      {
+        test:/\.mp3$/,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
       }
     ]
   },

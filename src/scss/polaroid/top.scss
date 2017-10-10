@@ -1,0 +1,35 @@
+@import '../base';
+
+.polaroid-top {
+  width: 600px;
+  height: 175px;
+  background-color: $gray-1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  
+  &-logo {
+    flex-grow: 2;	
+    height: 125px;
+    background-color: $gray-2;
+    margin: 20px 10px 20px 20px;
+    border-radius: 15px;
+    border: 5px solid $black;
+  }
+
+  &-flash {
+    flex-grow: 1;	
+    height: 135px;
+    background-color: $gray-3;
+    background: repeating-linear-gradient(
+      to bottom,
+      $gray-3,
+      $gray-3 15px,
+      $white 15px,
+      $white 30px
+    );
+    margin: 20px 20px 20px 10px;
+    border-radius: 15px;
+  }
+}

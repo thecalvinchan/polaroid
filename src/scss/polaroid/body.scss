@@ -1,0 +1,183 @@
+@import '../base';
+
+.polaroid-body {
+  position: relative;
+  z-index: 1;
+
+  &-main {
+    width: 480px;
+    margin: -30px auto 0px auto;
+    padding: 30px 20px;
+    height: 210px;
+    background-color: $beige;
+    position:relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    &-shutter {
+      position: absolute;
+      top: 210px;
+      left: -40px;
+      width: 20px;	
+      height: 40px;
+      border: 10px solid $gray-1;
+      background-color: $red;
+      border-bottom-left-radius: 15px;
+
+      &:hover {
+        cursor: pointer; 
+      }
+
+      &::before  {
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        content: "";
+        border-top: 10px solid $blue;
+        border-left: 20px solid $blue;
+        border-bottom: 10px solid $gray-2;
+        border-right: 20px solid $gray-2;
+      }
+    }
+
+    &-lens {
+      width: 310px;  
+      height: 150px;
+      background-color: $gray-1;
+      border: 5px solid $black;
+      border-radius: 7.5px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+
+      &-pattern {
+        margin: 10px;
+        width: 140px;
+        height: 130px;
+        background: repeating-linear-gradient(
+          to right,
+          $black,
+          $black 5px,
+          transparent 5px,
+          transparent 7px
+        );
+      }
+
+      &-glass {
+        border: 5px solid $white;
+        width: 140px;
+        height: 140px;
+        background-color: $black;
+        border-radius: 7.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-aperture {
+          width: 115px;
+          height: 115px;
+          background-color: $gray-3;
+          border-radius: 60px;
+          overflow: hidden;
+
+          &-reflection {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            border-top-left-radius: 150px;
+            transform: translateX(10px) translateY(10px);
+            background-color: $gray-2;
+          }
+        }
+      }
+    }
+
+    &-viewfinder {
+      width: 80px;
+      height: 155px;
+      background-color: $gray-1;
+      border: 5px solid $black;
+      border-radius: 7.5px;
+      padding: 20px;
+
+      &-glass {
+        border: 5px solid $black;
+        width: 70px;
+        height: 70px;
+        background-color: $gray-2;
+        border-radius: 7.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-aperture {
+          width: 80%;
+          height: 80%;
+          background-color: $gray-3;
+          border-radius: 60px;
+          overflow: hidden;
+
+          &-reflection {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            border-top-left-radius: 60px;
+            transform: translateX(5px) translateY(5px);
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  &-printer {
+
+    &-top {
+      position: relative;
+      width: 560px;
+      height: 40px;
+      background-color: $gray-2;
+
+      &::before {
+        position: absolute;
+        top: 0px;
+        content: "";
+        border-left: 40px solid $blue;
+        border-bottom: 40px solid $gray-2;
+        border-right: 0px solid $blue;
+      }
+
+      &::after {
+        position: absolute;
+        top: 0px;
+        right:-40px;
+        content: "";
+        border-right: 40px solid $blue;
+        border-bottom: 40px solid $gray-2;
+        border-left: 0px solid $blue;
+      }
+    }
+
+    &-bottom {
+      width: 100%;
+      height: 210px;
+      background-color: $gray-1;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+
+      &-slot {
+        width: 80%;
+        height: 5px;
+        background-color: $black;
+        border: 20px solid $gray-2;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+    }
+  }
+}
